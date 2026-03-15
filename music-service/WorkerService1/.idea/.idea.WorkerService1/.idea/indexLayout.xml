@@ -4,7 +4,9 @@
     <attachedFolders>
       <Path>../../../ITA-music-repo</Path>
     </attachedFolders>
-    <explicitIncludes />
+    <explicitIncludes>
+      <Path>../../.git/workflows/music-service-test.yaml</Path>
+    </explicitIncludes>
     <explicitExcludes />
   </component>
 </project>
