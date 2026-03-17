@@ -1,0 +1,31 @@
+﻿version: "3.9"
+
+services:
+  music-db:
+    image: postgres:16-alpine
+    container_name: music-db
+    environment:
+      POSTGRES_DB: musicdb
+      POSTGRES_USER: music
+      POSTGRES_PASSWORD: musicpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - music-db-data:/var/lib/postgresql/data
+
+  music-service:
+    build:
+      context: ./WorkerService1
+      dockerfile: WorkerService1/Dockerfile
+    container_name: music-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__MusicDb: Host=music-db;Port=5432;Database=musicdb;Username=music;Password=musicpass
+    ports:
+      - "8080:8080"
+    depends_on:
+      - music-db
+
+volumes:
+  music-db-data:
+

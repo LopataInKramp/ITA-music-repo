@@ -55,4 +55,11 @@ Mikrostoritve lahko med seboj komunicirajo preko REST API.
 
 <img width="587" height="512" alt="image" src="https://github.com/user-attachments/assets/113d7173-d129-491b-bf0b-007c5aeecd03" />
 
+## Status implementacije
+
+- `music-service` (mikrostoritev za upravljanje glasbe) je implementiran kot ASP.NET Core Web API.
+- Vključuje PostgreSQL podatkovno bazo, Swagger/OpenAPI, logiranje, teste repozitorija in teste vseh API končnih točk.
+- Docker podpora je na voljo preko `music-service/WorkerService1/WorkerService1/Dockerfile` in `music-service/docker-compose.yml`.
+- Podrobnejša navodila za zagon so v `music-service/README.md`.
+
 
