@@ -2,13 +2,16 @@ name: user-service-ci
 
 on:
   push:
+    paths:
+      - 'user-service/**'
+      - '.github/workflows/user-service-test.yml'
 
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: user-service/tests
+        working-directory: user-service
 
     steps:
       - name: Checkout
@@ -28,4 +31,4 @@ jobs:
         run: npm test
 
       - name: Build Docker image
-        run: docker build -t user-service:ci -f user-service/Dockerfile user-service
+        run: docker build -t user-service:ci -f Dockerfile .
