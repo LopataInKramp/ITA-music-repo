@@ -1,0 +1,71 @@
+﻿version: "3.9"
+
+services:
+  music-db:
+    image: postgres:16-alpine
+    container_name: music-db
+    environment:
+      POSTGRES_DB: musicdb
+      POSTGRES_USER: music
+      POSTGRES_PASSWORD: musicpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - music-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U music -d musicdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  music-service:
+    build:
+      context: ./music-service/WorkerService1
+      dockerfile: WorkerService1/Dockerfile
+    container_name: music-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__MusicDb: Host=music-db;Port=5432;Database=musicdb;Username=music;Password=musicpass
+    ports:
+      - "8080:8080"
+    depends_on:
+      music-db:
+        condition: service_healthy
+
+  user-db:
+    image: postgres:16-alpine
+    container_name: user-db
+    environment:
+      POSTGRES_DB: userdb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: userpass
+    ports:
+      - "5433:5432"
+    volumes:
+      - user-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d userdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    container_name: user-service
+    environment:
+      NODE_ENV: development
+      GRPC_HOST: 0.0.0.0
+      GRPC_PORT: 50051
+      DATABASE_URL: postgres://user:userpass@user-db:5432/userdb
+    ports:
+      - "50051:50051"
+      - "3000:3000"
+    depends_on:
+      user-db:
+        condition: service_healthy
+
+volumes:
+  music-db-data:
+  user-db-data:

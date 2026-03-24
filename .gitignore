@@ -1,0 +1,41 @@
+﻿# Dependencies
+tmp/
+temp/
+.cache/
+# Misc
+
+.nyc_output/
+coverage/
+# Testing
+
+.docker/
+# Docker
+
+*.iml
+*.swo
+*.swp
+.vscode/
+
+# Build outputs
+
+yarn-error.log*
+yarn-debug.log*
+npm-debug.log*
+*.log
+# Logs
+
+*.swo
+*.swp
+Thumbs.db
+.DS_Store
+# OS files
+
+.env.*.local
+.env.local
+.env
+# Environment variables
+
+yarn.lock
+package-lock.json
+node_modules/
+
