@@ -1,0 +1,24 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "gRPC user management microservice",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/userService.test.js"
+  },
+  "keywords": [
+    "grpc",
+    "microservice",
+    "users"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.6",
+    "@grpc/proto-loader": "^0.7.13",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "pg": "^8.13.1"
+  }
+}
