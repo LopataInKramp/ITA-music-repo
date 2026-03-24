@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2376d7d-de53-4fad-8a67-20b4e206324e" name="Changes" comment="" />
+    <list default="true" id="a2376d7d-de53-4fad-8a67-20b4e206324e" name="Changes" comment="commit2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/tests/userService.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/tests/userService.test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774310498961</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1774310968703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774310968703</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +147,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="user-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="user-service" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="commit2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit2" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
