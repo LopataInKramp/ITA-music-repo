@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2376d7d-de53-4fad-8a67-20b4e206324e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user-service/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="a2376d7d-de53-4fad-8a67-20b4e206324e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,12 +32,12 @@
     &quot;assignee&quot;: &quot;LopataInKramp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LopataInKramp/ITA-music-repo.git",
-    "accountId": "d2a15dee-4fdf-49a2-b708-545ed3bca091"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LopataInKramp/ITA-music-repo.git&quot;,
+    &quot;accountId&quot;: &quot;d2a15dee-4fdf-49a2-b708-545ed3bca091&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -65,7 +63,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "music-service",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
